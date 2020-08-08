@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <span> GBP - FITNESS </span>
+        </div>
+        
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-button [matMenuTriggerFor]="afterMenu">
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                    <mat-menu #afterMenu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>settings</mat-icon>
+                            settings
+                        </button>
+                    </mat-menu>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="beforeMenu">
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                    <mat-menu #beforeMenu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>help</mat-icon>
+                            help
+                        </button>
+                    </mat-menu>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </button>
+                    </mat-menu>
+
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,36 @@
+<div class="container align-center">
+    <div class="row">
+        <div class="mbr-white col-md-10">
+            <h2 class="mbr-section-title"> Calorie Calucator </h2>
+            <p class="mbr-text">
+                You'll burn one calorie for every 20 steps you burn,We encourage you to have a goal of taking 10,000
+                steps per day to burn 500 calories, which equals a pound of fat over the course of a week
+            </p>
+            <p>
+                <a href="https://www.quora.com/How-many-normal-steps-does-it-take-to-burn-1-calorie#:~:text=You'll%20burn%20one%20calorie,the%20course%20of%20a%20week." target="_blank">
+                Reference
+                </a>
+            </p>
+            <mat-divider></mat-divider>
+
+        </div>
+    <div>
+</div>
+<br>
+<br>
+<br>
+<br>
+</div>
+<h4 class="mbr-section-secondary-title">Enter Target Calories </h4>
+<mat-form-field>
+    <mat-label>Calories</mat-label>
+    <input matInput [formControl]="calorie" placeholder="Number of Calories!" #calories>
+    <mat-error *ngIf="calorie.hasError('pattern') && !calorie.hasError('required')">
+        Please enter a valid Number
+      </mat-error>
+</mat-form-field>
+
+<button mat-stroked-button (click)="openSnackBar(calories.value)" aria-label="Show an example snack-bar">
+    Check
+</button>
+</div>
